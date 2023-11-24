@@ -7,7 +7,7 @@ import Name from './Name';
 import Price from './Price';
 import Description from './Description';
 import Image from './Image.jsx';
-
+import téléchargement from './téléchargement.png'
 
 
 
@@ -15,6 +15,8 @@ import Image from './Image.jsx';
 
 
 function App() {
+  //declaring name
+  const firstName="Saida";
   return (
     <div className="App">
 
@@ -29,6 +31,16 @@ function App() {
       </Card.Body>
       <Card.Footer className style={{color:'#B21807'}}><Price/></Card.Footer>
     </Card>
+    {firstName ?(
+      <div className='condition'>
+
+        <p style={{backgroundColor:'#FFFFFF', borderRadius:'7px'}}> Hello {firstName} !</p>
+        <img src={téléchargement} alt="chef" style={{borderRadius:'100px',width:'100px', marginBottom:'100px'}}/>
+        </div>
+    ):(
+    <p>Hello , there!</p>
+    )}
+    
     </div>
   );
 }
